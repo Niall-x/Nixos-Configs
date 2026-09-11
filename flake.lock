@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789153303,
-        "narHash": "sha256-NB9HDUv3mULUgyy5ezbCdOELU6p6hUambwpaeNnS5zc=",
+        "lastModified": 1789154602,
+        "narHash": "sha256-mfr5Qv2sBh7pX2jVzl/g6zQzy+JC8NVgMZ03tuMEfKc=",
         "owner": "Niall-xox",
         "repo": "ESP32-IR-CEC-Alternative",
-        "rev": "e54219f0c65b9f8a7d5f165a3006d137b896bbb0",
+        "rev": "608d876c18bb6007595f6c4d2caf2309acf06609",
         "type": "github"
       },
       "original": {
