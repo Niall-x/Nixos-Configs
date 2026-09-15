@@ -27,7 +27,7 @@
 
     ### nialls-pc (ESP32 IR remote — CEC alternative) ###
     esp32-ir-remote = {
-      url = "github:Niall-xox/ESP32-IR-CEC-Alternative";
+      url = "github:Niall-x/ESP32-IR-CEC-Alternative";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
