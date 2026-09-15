@@ -147,8 +147,8 @@
     spotify
     vscodium
     freecad
-    gmsh # Freecad mesher
-    calculix-ccx # Freecad solver
+    # gmsh # Freecad mesher (Too large to compile)
+    # calculix-ccx # Freecad solver (Too large to compile)
     orca-slicer
     kicad
     libreoffice
