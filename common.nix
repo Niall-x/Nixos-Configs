@@ -26,6 +26,13 @@
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Enable Swap File and RAM Compression
+  swapDevices = [{
+    device = "/var/lib/swapfile";
+    size = 16*1024; # 16 GiB
+  }];
+  zramSwap.enable = true;
+
   # Allow propriatary packages eg. nvidia drivers
   nixpkgs.config.allowUnfree = true;
 
@@ -131,6 +138,8 @@
     nautilus
     libheif #for nautilus
     udiskie #for nautlius
+    btop
+    mission-center
     git
     gh
     xdg-user-dirs
@@ -146,9 +155,9 @@
     discord
     spotify
     vscodium
-    freecad
-    gmsh # Freecad mesher
-    calculix-ccx # Freecad solver
+#    freecad
+#    gmsh # Freecad mesher
+#    calculix-ccx # Freecad solver
     orca-slicer
     kicad
     libreoffice
