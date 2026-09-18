@@ -154,7 +154,7 @@
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     discord
     spotify
-    vscodium
+    zed-editor
 #    freecad
 #    gmsh # Freecad mesher
 #    calculix-ccx # Freecad solver
