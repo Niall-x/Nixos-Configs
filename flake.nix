@@ -17,6 +17,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ### Personal Github Projects ###
+
+    tetris-tui = {
+      url = "github:Niall-x/tetris-tui";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    esp32-ir-remote = {
+      url = "github:Niall-x/ESP32-IR-CEC-Alternative";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ### MACHINE SPECIFIC FLAKE INPUTS ###
 
     ### nialls-laptop (framework 13: officialy suported)###
@@ -25,11 +37,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ### nialls-pc (ESP32 IR remote — CEC alternative) ###
-    esp32-ir-remote = {
-      url = "github:Niall-x/ESP32-IR-CEC-Alternative";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
   };
 

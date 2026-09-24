@@ -134,6 +134,7 @@
   environment.systemPackages = with pkgs; [
     kitty
     asciiquarium-transparent
+    inputs.tetris-tui.packages.${pkgs.stdenv.hostPlatform.system}.default
     neovim
     nautilus
     libheif #for nautilus
