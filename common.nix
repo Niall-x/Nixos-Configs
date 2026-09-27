@@ -139,6 +139,7 @@
     nautilus
     libheif #for nautilus
     udiskie #for nautlius
+    loupe
     btop
     mission-center
     git
