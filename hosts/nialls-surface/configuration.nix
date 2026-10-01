@@ -5,6 +5,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./power.nix
     ../../common.nix
     inputs.nixos-hardware.nixosModules.microsoft-surface-pro-intel
   ];
