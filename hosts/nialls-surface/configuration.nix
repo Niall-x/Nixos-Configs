@@ -21,6 +21,9 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
+  # GNOME OSK auto-appear fix
+  i18n.inputMethod.ibus.waylandFrontend = true;
+
   # Additional system packages
   environment.systemPackages = with pkgs; [ gnome-extension-manager ];
 
