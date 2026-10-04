@@ -158,7 +158,7 @@
     spotify
     zed-editor
     freecad
-    calculix-cxx
+    calculix-ccx
     gmsh
     orca-slicer
     kicad
