@@ -102,6 +102,9 @@
           type = "disk";
           format = "{size-used} / {size-total} ({size-percentage}%)"; # no filesystem (ext4, etc.)
         }
+	{
+	  type = "packages";
+	}
         "break"
         "colors"
       ];

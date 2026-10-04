@@ -25,6 +25,11 @@
   # ESP32 IR remote — mirrors PC power state to the TV
   services.esp32-ir-remote.enable = true;
 
+  # nialls-pc exclusive packages
+  environment.systemPackages = with pkgs; [
+    wayvr
+  ];
+
   system.stateVersion = "26.05";
 
 }
