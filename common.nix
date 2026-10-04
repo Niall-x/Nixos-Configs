@@ -157,9 +157,9 @@
     discord
     spotify
     zed-editor
-#    freecad
-#    gmsh # Freecad mesher
-#    calculix-ccx # Freecad solver
+    freecad
+    calculix-cxx
+    gmsh
     orca-slicer
     kicad
     libreoffice
