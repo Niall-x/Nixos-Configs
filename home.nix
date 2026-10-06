@@ -1,7 +1,7 @@
 # home.nix common accross all systems
 
 # Import hostname as it is defined in flake.nix (used to define monitors.lua)
-{ config, pkgs, hostname, ... }:
+{ config, pkgs, lib, hostname, ... }:
 
 {
   home.stateVersion = "26.05";
@@ -115,6 +115,12 @@
     enable = true;
   };
 
+  # Gnome settings for specifying GTK theme (requires programs.dconf.enable = true)
+  dconf.settings."org/gnome/desktop/interface" = {
+    gtk-theme = "adw-gtk3";
+    color-scheme = "prefer-dark"; # or prefer-light
+  };
+
   # Symlink for hyprland.lua and respective monitors.lua
   xdg.configFile."hypr/hyprland.lua".source = ./hyprland.lua;
   xdg.configFile."hypr/monitors.lua".source = ./hosts/${hostname}/monitors.lua;
@@ -125,11 +131,17 @@
     colors_changed = "hyprctl reload"
   '';
 
-  # Gnome settings for specifying GTK theme (requires programs.dconf.enable = true)
-  dconf.settings."org/gnome/desktop/interface" = {
-    gtk-theme = "adw-gtk3";
-    color-scheme = "prefer-dark"; # or prefer-light
+  # Start Steam minimised to tray on login (nialls-pc only)
+  xdg.configFile."autostart/steam.desktop" = lib.mkIf (hostname == "nialls-pc") {
+    text = ''
+      [Desktop Entry]
+      Type=Application
+      Name=Steam
+      Exec=steam -silent
+      Icon=steam
+    '';
   };
+
 
   # Enable home manager cli commands
   programs.home-manager.enable = true;
