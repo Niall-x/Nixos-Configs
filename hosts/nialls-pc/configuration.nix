@@ -28,6 +28,7 @@
   # nialls-pc exclusive packages
   environment.systemPackages = with pkgs; [
     wayvr
+    bs-manager
   ];
 
   system.stateVersion = "26.05";
