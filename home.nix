@@ -137,7 +137,7 @@
       [Desktop Entry]
       Type=Application
       Name=Steam
-      Exec=steam -silent
+      Exec=steam -silent -pipewire
       Icon=steam
     '';
   };
