@@ -7,6 +7,9 @@
     ./hardware-configuration.nix
     ../../common.nix
     inputs.esp32-ir-remote.nixosModules.default
+
+    # Implemented fix for steam vr popup. check nixos steam vr docs to see if fixed
+    ./steamvr-setcap-fix.nix
   ];
 
   # Defined hostname
