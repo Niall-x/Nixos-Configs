@@ -1,7 +1,7 @@
 # home.nix common accross all systems
 
 # Import hostname as it is defined in flake.nix (used to define monitors.lua)
-{ config, pkgs, lib, hostname, ... }:
+{ config, pkgs, hostname, ... }:
 
 {
   home.stateVersion = "26.05";
@@ -130,17 +130,6 @@
     [hooks]
     colors_changed = "hyprctl reload"
   '';
-
-  # Start Steam minimised to tray on login (nialls-pc only)
-  xdg.configFile."autostart/steam.desktop" = lib.mkIf (hostname == "nialls-pc") {
-    text = ''
-      [Desktop Entry]
-      Type=Application
-      Name=Steam
-      Exec=steam -silent -pipewire
-      Icon=steam
-    '';
-  };
 
 
   # Enable home manager cli commands
