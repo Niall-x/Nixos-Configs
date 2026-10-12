@@ -34,6 +34,13 @@
     bs-manager
   ];
 
+  #fix for steam frame adaptop unreliability (may be fixed by valve later)
+  systemd.services.wpa_supplicant = {
+    after = [ "sys-subsystem-net-devices-wlp8s0.device" ];
+    wants = [ "sys-subsystem-net-devices-wlp8s0.device" ];
+  };
+  
+
   system.stateVersion = "26.05";
 
 }
