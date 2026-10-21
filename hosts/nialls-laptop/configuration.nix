@@ -19,5 +19,8 @@
   services.fprintd.enable = true;
   security.pam.services.ly.fprintAuth = true;
 
+  # Firmware updating service
+  services.fwupd.enable = true;
+
   system.stateVersion = "26.05"; # match whatever nixos-generate-config reports on first install
 }
