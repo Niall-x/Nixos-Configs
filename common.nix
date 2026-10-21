@@ -59,6 +59,21 @@
     enable = true;
   };
 
+  # Enable Printing
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      cups-filters
+      cups-browsed
+    ];
+  };
+
   # Enable display manager (Ly)
   services.displayManager.ly.enable = true;
 
@@ -119,6 +134,14 @@
     recommendedServices.enable = true;
   };
 
+  # Garbage Collection
+  nix.settings.auto-optimise-store = true;
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 15d";
+  };
+
   # Enable Flatpaks
   services.flatpak.enable = true;
   systemd.services.flatpak-repo = {
@@ -138,6 +161,7 @@
     neovim
     nautilus
     libheif #for nautilus
+    libheif.out #for nautilus
     udiskie #for nautlius
     loupe
     btop
