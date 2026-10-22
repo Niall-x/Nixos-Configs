@@ -5,7 +5,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../common.nix
+    ../../common
+    ../../hyprland
     inputs.nixos-hardware.nixosModules.framework-13-7040-amd
   ];
 

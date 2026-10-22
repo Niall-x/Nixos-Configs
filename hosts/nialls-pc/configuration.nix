@@ -5,7 +5,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../common.nix
+    ../../common
+    ../../hyprland
     inputs.esp32-ir-remote.nixosModules.default
 
     # Implemented fix for steam vr popup. check nixos steam vr docs to see if fixed
@@ -39,7 +40,7 @@
     after = [ "sys-subsystem-net-devices-wlp8s0.device" ];
     wants = [ "sys-subsystem-net-devices-wlp8s0.device" ];
   };
-  
+
 
   system.stateVersion = "26.05";
 

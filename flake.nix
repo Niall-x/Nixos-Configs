@@ -2,9 +2,7 @@
   description = "Nixos flake config, common accross all hostsystems";
 
   inputs = {
-
     ### UNIVERSAL FLAKE INPUTS ###
-
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
     home-manager = {
@@ -18,7 +16,6 @@
     };
 
     ### Personal Github Projects ###
-
     tetris-tui = {
       url = "github:Niall-x/tetris-tui";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,13 +27,11 @@
     };
 
     ### MACHINE SPECIFIC FLAKE INPUTS ###
-
     ### nialls-laptop (framework 13: officialy suported)###
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
 
   };
 
@@ -52,7 +47,6 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = { inherit inputs hostname; };
-          home-manager.users.niall = ./home.nix;
         }
       ];
     };

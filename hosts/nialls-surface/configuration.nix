@@ -5,8 +5,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./power.nix
-    ../../common.nix
+    ../../common
+    ../../hyprland
     inputs.nixos-hardware.nixosModules.microsoft-surface-pro-intel
   ];
 
