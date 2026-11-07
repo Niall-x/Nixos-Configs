@@ -60,13 +60,11 @@
   };
   security.rtkit.enable = true;
 
-  # Enable Printing
   services.avahi = {
     enable = true;
     nssmdns4 = true;
     openFirewall = true;
   };
-
   services.printing = {
     enable = true;
     drivers = with pkgs; [
@@ -75,9 +73,14 @@
     ];
   };
 
-  # Enable Tailscale
   services.tailscale = {
     enable = true;
   };
+
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
 
 }
