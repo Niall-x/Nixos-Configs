@@ -16,13 +16,6 @@
     libreoffice
     darktable
     claude-code
-
-    #Engineering
-    freecad
-    calculix-ccx
-    gmsh
-    kicad
-    orca-slicer
   ];
 
   # Steam settings
